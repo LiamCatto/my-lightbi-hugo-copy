@@ -1,12 +1,12 @@
 <span class="post-meta text-muted">
-  {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
+  <!--{{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
   {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
 
   {{ $datestr }}
 
   {{ if and .Site.Params.lastmod (ne $datestr $lastmodstr) }}
   {{ i18n "lastModified" $lastmodstr }}
-  {{ end }}
+  {{ end }}-->
 
   {{ if .Site.Params.readingTime }}
   &nbsp;|&nbsp; <i class="bi bi-clock"></i>&nbsp;{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" .ReadingTime }}
