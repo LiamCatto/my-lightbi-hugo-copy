@@ -10,11 +10,11 @@
 
         <p class="fw-light">{{ .Site.Params.profileShortbio | safeHTML }}</p>
 
-        <p class="fw-light">If you're new here, feel free to explore the website by clicking the below button.</p>
+        <!--<p class="fw-light">If you're new here, feel free to explore the website by clicking the below button.</p>
 
         <a href="{{ relLangURL "/about/" }}"  class="">
           <button type="button" class="btn btn-success bg-cgreen">Explore</button>
-        </a>
+        </a>-->
       </div>
 
       <div class="col-sm-12 col-md-4 col-lg-4">
@@ -37,8 +37,8 @@
     <div class="container">
     <div class="row mt-5">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-        <h2 class="fw-medium">Essays</h2>
-        <p class="mt-0">A curated mix of technical essays and daily learnings.</p>
+        <h2 class="fw-medium">Portfolio Pieces</h2>
+        <p class="mt-0">Below you can find brief descriptions of various projects I have worked on. Click a project below for more detail, or go to the project page for a brief summary of each one!</p>
       </div>
     </div>
 
@@ -46,7 +46,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
         <div class="row">
-          {{ $pag := .Paginate (where site.RegularPages "Type" "in" (slice "posts" ) ) 3 }}
+          {{ $pag := .Paginate (where site.RegularPages "Type" "in" (slice "projects" ) ) 3 }}
           {{ range $pag.Pages }}
           {{ partial "post_preview_card" . }}
           {{ end }}
@@ -58,7 +58,7 @@
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
         <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4">
-          <a href="{{ relLangURL "/posts/" }}" class="link-underline position-relative d-inline-block">
+          <a href="{{ relLangURL "/projects/" }}" class="link-underline position-relative d-inline-block">
             Browse all <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -108,4 +108,18 @@
 
 </div>
 </div>
+</div>
+<div style="display: grid; justify-content: center; place-items: center;">
+  <br />
+  <h4 style="display: flex; justify-content: center; align-items: center;">
+    Contact
+  </h4>
+  <p>
+    Email: liammercado90@gmail.com
+  </p>
+  <br />
+  <a href="https://linkedin.com/in/liam-mercado-4a9b62359" target="_blank" style="text-decoration: underline">Linked In</a>
+  <a href="https://champlain.joinhandshake.com/profiles/5dp8qq" target="_blank" style="text-decoration: underline">Handshake</a>
+  <a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-jobseeker-profile--profile-one-frontend" target="_blank" style="text-decoration: underline">Indeed</a>
+  <br />
 </div>
