@@ -46,7 +46,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
         <div class="row">
-          {{ $pag := .Paginate (where site.RegularPages "Type" "in" (slice "projects" ) ) 3 }}
+          {{ $pag := .Paginate (where site.RegularPages "Type" "in" (slice "projectfolder" ) ) 3 }}
           {{ range $pag.Pages }}
           {{ partial "post_preview_card" . }}
           {{ end }}
@@ -58,7 +58,7 @@
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
         <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4">
-          <a href="{{ relLangURL "/projects/" }}" class="link-underline position-relative d-inline-block">
+          <a href="{{ "/PortfolioSite/project-list/" }}" class="link-underline position-relative d-inline-block"> 
             Browse all <i class="bi bi-arrow-right"></i>
           </a>
         </div>

@@ -52,7 +52,8 @@
               </h1>
 
               <h4 class="tags-subheading fw-light mb-4">
-                {{ .Site.Params.tagSubtitle }}</h4>
+                {{ .Site.Params.tagSubtitle }}
+              </h4>
             </div>
             {{ else }}
 
@@ -62,7 +63,6 @@
                 {{ .Title }}
                 {{ end }}
               </h1>
-              </br>
               </br>
             </div>
 
@@ -75,9 +75,9 @@
 
             {{ if $subtitle }}
             {{ if eq .Type "page" }}
-            <span class="{{ .Type }}-subheading fw-light mb-4">{{ $subtitle }}</span>
+            <span class="{{ .Type }}-subheading fw-light mb-4" style="text-align: center; margin: 0 auto;">{{ $subtitle }}</span>
             {{ else }}
-            <h4 class="{{ .Type }}-subheading fw-light mb-4">{{ $subtitle }}</h4>
+            <h4 class="{{ .Type }}-subheading fw-light mb-4" style="text-align: center; margin: 0 auto;">{{ $subtitle }}</h4>
             {{ end }}
             {{ end }}
 
@@ -86,6 +86,7 @@
             {{ partial "post_meta.html" .}}
             {{ end }}
             {{ end }}
+            </br>
           </div>
         </div>
       </div>
